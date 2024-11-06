@@ -1,0 +1,116 @@
+/*------------------------------------*\
+  #COMMON CSS
+\*------------------------------------*/
+body {
+  font-family: var(--primary-font-family);
+  width: 1520px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: start;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.space-center {
+  justify-content: space-center;
+}
+
+.grid-container {
+  display: grid;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.btn {
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 8px 16px;
+  gap: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border: 1px solid var(--primary-color);
+}
+
+.btn.active {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+.ml-4 {
+  margin-left: 4px;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.gap-5 {
+  gap: 5px;
+}
+
+.size-icon {
+  font-size: 20px;
+}
+
+.label {
+  font-size: 10px;
+  color: var(--secondary-color);
+}
+
+.input {
+  height: 28px;
+  border: none;
+  background-color: var(--light-color);
+  margin-top: 8px;
+  border-radius: 4px;
+  outline: none;
+  color: var(--secondary-color);
+  padding-left: 6px;
+  font-size: 10px;
+}
+
+.input::placeholder {
+  color: var(--secondary-color);
+  padding-left: 6px;
+}

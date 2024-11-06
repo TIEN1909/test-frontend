@@ -1,0 +1,32 @@
+.info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.form {
+  width: 25%;
+  background-color: white;
+  padding: 0 10px;
+}
+
+.info-user {
+  font-size: 14px;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.info-detail-wrapper {
+  background-color: var(--light-color);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.input-detail {
+  background-color: white;
+}
+
+.icon-detail {
+  color: var(--primary-color);
+}
