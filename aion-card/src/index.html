@@ -28,67 +28,123 @@
     <!-- main -->
     <main class="container">
         <div class="flex tab-list">
-            <button class="flex-column items-center btn active">
+            <button class="flex-column items-center btn active" onclick="openTab(event, 'details')">
                 <i class="fa-regular fa-user size-icon"></i>
                 <span>Chi tiết</span>
             </button>
-
-            <button class="flex-column items-center btn">
+            <button class="flex-column items-center btn" onclick="openTab(event, 'links')">
                 <i class="fa-solid fa-share size-icon"></i>
                 <span>Links</span>
             </button>
-
-            <button class="flex-column items-center btn">
+            <button class="flex-column items-center btn" onclick="openTab(event, 'design')">
                 <i class="fa-solid fa-crop size-icon"></i>
                 <span>Thiết kế</span>
             </button>
         </div>
 
-        <div class="flex ">
-            <!-- form info-->
-            <form action="" class="form">
-                <div class="flex-column">
-                    <p class="info-user mt-16">Thông tin cá nhân</p>
-                    <label for="fname" class="label mt-16">Họ và tên</label>
-                    <input type="text" id="fname" name="fname" class="input" value="Dương Thanh Nghê 127"
-                        placeholder="Họ và tên">
 
-                    <label for="nickname" class="label mt-16">Biệt danh</label>
-                    <input type="text" id="nickname" name="nickname" class="input">
+        <div class="flex">
+            <div id="details" class="tab-content active">
+                <!-- form info-->
+                <form class="form">
+                    <div class="flex-column">
+                        <p class="info-user mt-16">Thông tin cá nhân</p>
+                        <label for="fname" class="label mt-16">Họ và tên</label>
+                        <input type="text" id="fname" name="fname" class="input" value="Dương Thanh Nghê 127"
+                            placeholder="Họ và tên">
 
-                    <label for="title" class="label mt-16">Chức danh</label>
-                    <input type="text" id="title" name="title" class="input" value="Manager" placeholder="Chức danh">
-                </div>
+                        <label for="nickname" class="label mt-16">Biệt danh</label>
+                        <input type="text" id="nickname" name="nickname" class="input">
 
-                <div class="flex-column">
-                    <p class="info-user mt-16">Chi tiết</p>
-                    <div class="flex-column info-detail-wrapper mt-16">
-                        <label for="fname" class="label"><i class="fa-solid fa-phone icon-detail"></i> <span
-                                class="ml-4">Phone</span></label>
-                        <input type="number" id="fname" name="phone" class="input input-detail" value="0365305920"
-                            placeholder="Your name..">
+                        <label for="title" class="label mt-16">Chức danh</label>
+                        <input type="text" id="title" name="title" class="input" value="Manager"
+                            placeholder="Chức danh">
                     </div>
 
-                    <div class="flex-column info-detail-wrapper mt-16">
-                        <label for="email" class="label"><i class="fa-solid fa-envelope icon-detail"></i> <span
-                                class="ml-4">
-                                Email
-                            </span></label>
-                        <input type="email" id="email" name="email" class="input input-detail"
-                            value="duongthanhnghe120796@gmail.com" placeholder="Your name..">
-                    </div>
+                    <div class="flex-column">
+                        <p class="info-user mt-16">Chi tiết</p>
+                        <div class="flex-column info-detail-wrapper mt-16">
+                            <label for="fname" class="label"><i class="fa-solid fa-phone icon-detail"></i> <span
+                                    class="ml-4">Phone</span></label>
+                            <input type="number" id="fname" name="phone" class="input input-detail" value="0365305920"
+                                placeholder="Your name..">
+                        </div>
 
-                    <div class="flex-column info-detail-wrapper mt-16">
-                        <label for="address" class="label"><i class="fa-solid fa-location-dot icon-detail"></i><span
-                                class="ml-4">
-                                Địa chỉ
-                            </span></label>
-                        <input type="text" id="fname" name="address" class="input input-detail" value="Đà Nẵng"
-                            placeholder="Địa chỉ">
+                        <div class="flex-column info-detail-wrapper mt-16">
+                            <label for="email" class="label"><i class="fa-solid fa-envelope icon-detail"></i> <span
+                                    class="ml-4">
+                                    Email
+                                </span></label>
+                            <input type="email" id="email" name="email" class="input input-detail"
+                                value="duongthanhnghe120796@gmail.com" placeholder="Your name..">
+                        </div>
+
+                        <div class="flex-column info-detail-wrapper mt-16">
+                            <label for="address" class="label"><i class="fa-solid fa-location-dot icon-detail"></i><span
+                                    class="ml-4">
+                                    Địa chỉ
+                                </span></label>
+                            <input type="text" id="fname" name="address" class="input input-detail" value="Đà Nẵng"
+                                placeholder="Địa chỉ">
+                        </div>
                     </div>
-                </div>
-            </form>
-            <!-- end form info -->
+                </form>
+                <!-- end form info -->
+            </div>
+
+            <div id="links" class="tab-content">
+                <!-- form info-->
+                <form action="" class="form">
+                    <div class="flex-column">
+                        <p class="info-user mt-16">Links</p>
+                        <div class="flex-column info-detail-wrapper mt-16">
+                            <label for="facebook" class="label"> <i class="fa-brands fa-facebook-f icon-detail"></i>
+                                <span class="ml-4">Facebook</span></label>
+                            <input type="number" id="facebook" name="facebook" class="input input-detail"
+                                value="https://www.facebook.com/" placeholder="https://www.facebook.com/">
+                        </div>
+
+                        <div class="flex-column info-detail-wrapper mt-16">
+                            <label for="instagram" class="label"><i class="fa-brands fa-instagram icon-detail"></i>
+                                <span class="ml-4">
+                                    Instagram
+                                </span></label>
+                            <input type="instagram" id="instagram" name="instagram" class="input input-detail"
+                                value="https://www.instagram.com/" placeholder="https://www.instagram.com/">
+                        </div>
+
+                        <div class="flex-column info-detail-wrapper mt-16">
+                            <label for="twitter" class="label"><i class="fa-brands fa-twitter icon-detail"></i><span
+                                    class="ml-4">
+                                    Twitter
+                                </span></label>
+                            <input type="text" id="twitter" name="twitter" class="input input-detail"
+                                value="https://x.com/" placeholder="https://x.com/">
+                        </div>
+                    </div>
+                </form>
+                <!-- end form info -->
+            </div>
+
+            <div id="design" class="tab-content">
+                <!-- form info-->
+                <form action="" class="form">
+                    <div class="flex-column">
+                        <p class="info-user mt-16">Thông tin cá nhân</p>
+                        <label for="fname" class="label mt-16">Họ và tên</label>
+                        <input type="text" id="fname" name="fname" class="input" value="Dương Thanh Nghê 127"
+                            placeholder="Họ và tên">
+
+                        <label for="nickname" class="label mt-16">Biệt danh</label>
+                        <input type="text" id="nickname" name="nickname" class="input">
+
+                        <label for="title" class="label mt-16">Chức danh</label>
+                        <input type="text" id="title" name="title" class="input" value="Manager"
+                            placeholder="Chức danh">
+                    </div>
+                </form>
+                <!-- end form info -->
+            </div>
 
             <!-- card -->
             <div class="card-wrapper">
@@ -171,12 +227,17 @@
                     <div class="line"></div>
                 </div>
             </div>
+            <!-- end card -->
         </div>
+
+
+
         </div>
-        <!-- end card -->
         </div>
     </main>
     <!-- end main -->
+
+    <script src="./index.js"></script>
 </body>
 
 </html>
