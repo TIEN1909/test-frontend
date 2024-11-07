@@ -68,17 +68,14 @@ document.querySelectorAll(".icon-list-social").forEach((item) => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const defaultActiveLinks = ["facebook", "instagram", "twitter"];
 
-  function toggleInputVisibility(linkId, show) {
-    const wrapper = document.getElementById(linkId + "-wrapper");
-    if (show) {
-      wrapper.style.display = "flex";
-    } else {
-      wrapper.style.display = "none";
-    }
-  }
+  // Hàm toggleInputVisibility sử dụng arrow function
+  const toggleInputVisibility = (linkId, show) => {
+    const wrapper = document.getElementById(`${linkId}-wrapper`);
+    wrapper.style.display = show ? "flex" : "none";
+  };
 
   const allLinks = ["facebook", "instagram", "twitter", "youtube", "linkedin"];
 
@@ -88,20 +85,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const socialLinks = document.querySelectorAll(".list-social a");
   socialLinks.forEach((link) => {
-    link.addEventListener("click", function (event) {
+    link.addEventListener("click", (event) => {
       event.preventDefault();
       const socialMedia = event.currentTarget.id.replace("-link", "");
-      const wrapper = document.getElementById(socialMedia + "-wrapper");
+      const wrapper = document.getElementById(`${socialMedia}-wrapper`);
       const isVisible = wrapper.style.display !== "none";
 
       toggleInputVisibility(socialMedia, !isVisible);
-
       event.currentTarget.classList.toggle("active");
     });
   });
 });
 
-// Set default active inputs on page load
 window.addEventListener("load", () => {
   document.getElementById("facebook-form").classList.add("active");
   document.getElementById("instagram-form").classList.add("active");
