@@ -1,5 +1,6 @@
 .card-wrapper {
   width: 73%;
+  height: 550px;
   background-color: var(--light-color);
   display: flex;
   justify-content: center;
