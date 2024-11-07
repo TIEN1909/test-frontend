@@ -29,3 +29,26 @@
 .icon-detail {
   color: var(--primary-color);
 }
+
+.list-social {
+  padding: 0 10px;
+  margin-top: 24px;
+}
+
+.icon-list-social {
+  align-items: center;
+  gap: 8px;
+  padding: 6px;
+  width: 40px;
+  border-radius: 8px;
+  color: var(--dark-color);
+}
+
+.icon-list-social.active {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.text-social {
+  font-size: 8px;
+}
