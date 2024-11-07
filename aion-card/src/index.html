@@ -46,7 +46,7 @@
         <div class="flex">
             <div id="details" class="tab-content active">
                 <!-- form info-->
-                <form class="form">
+                <form class="form" id="form-details">
                     <div class="flex-column">
                         <p class="info-user mt-16">Thông tin cá nhân</p>
                         <label for="fname" class="label mt-16">Họ và tên</label>
@@ -64,10 +64,10 @@
                     <div class="flex-column">
                         <p class="info-user mt-16">Chi tiết</p>
                         <div class="flex-column info-detail-wrapper mt-16">
-                            <label for="fname" class="label"><i class="fa-solid fa-phone icon-detail"></i> <span
+                            <label for="phone" class="label"><i class="fa-solid fa-phone icon-detail"></i> <span
                                     class="ml-4">Phone</span></label>
-                            <input type="number" id="fname" name="phone" class="input input-detail" value="0365305920"
-                                placeholder="Your name..">
+                            <input type="number" id="phone" name="phone" class="input input-detail" value="0365305920"
+                                placeholder="Your phone..">
                         </div>
 
                         <div class="flex-column info-detail-wrapper mt-16">
@@ -76,7 +76,7 @@
                                     Email
                                 </span></label>
                             <input type="email" id="email" name="email" class="input input-detail"
-                                value="duongthanhnghe120796@gmail.com" placeholder="Your name..">
+                                value="duongthanhnghe120796@gmail.com" placeholder="Your email..">
                         </div>
 
                         <div class="flex-column info-detail-wrapper mt-16">
@@ -84,7 +84,7 @@
                                     class="ml-4">
                                     Địa chỉ
                                 </span></label>
-                            <input type="text" id="fname" name="address" class="input input-detail" value="Đà Nẵng"
+                            <input type="text" id="address" name="address" class="input input-detail" value="Đà Nẵng"
                                 placeholder="Địa chỉ">
                         </div>
                     </div>
@@ -94,55 +94,75 @@
 
             <div id="links" class="tab-content">
                 <!-- form info-->
-                <form action="" class="form">
+                <form id="form-links" class="form">
                     <div class="flex-column">
                         <p class="info-user mt-16">Links</p>
-                        <div class="flex-column info-detail-wrapper mt-16">
-                            <label for="facebook" class="label"> <i class="fa-brands fa-facebook-f icon-detail"></i>
-                                <span class="ml-4">Facebook</span></label>
-                            <input type="number" id="facebook" name="facebook" class="input input-detail"
+                        <div class="flex-column info-detail-wrapper mt-16" id="facebook-wrapper">
+                            <label for="facebook" class="label">
+                                <i class="fa-brands fa-facebook-f icon-detail"></i>
+                                <span class="ml-4">Facebook</span>
+                            </label>
+                            <input type="text" id="facebook" name="facebook" class="input input-detail"
                                 value="https://www.facebook.com/" placeholder="https://www.facebook.com/">
                         </div>
 
-                        <div class="flex-column info-detail-wrapper mt-16">
-                            <label for="instagram" class="label"><i class="fa-brands fa-instagram icon-detail"></i>
-                                <span class="ml-4">
-                                    Instagram
-                                </span></label>
-                            <input type="instagram" id="instagram" name="instagram" class="input input-detail"
+                        <div class="flex-column info-detail-wrapper mt-16" id="instagram-wrapper">
+                            <label for="instagram" class="label">
+                                <i class="fa-brands fa-instagram icon-detail"></i>
+                                <span class="ml-4">Instagram</span>
+                            </label>
+                            <input type="text" id="instagram" name="instagram" class="input input-detail"
                                 value="https://www.instagram.com/" placeholder="https://www.instagram.com/">
                         </div>
 
-                        <div class="flex-column info-detail-wrapper mt-16">
-                            <label for="twitter" class="label"><i class="fa-brands fa-twitter icon-detail"></i><span
-                                    class="ml-4">
-                                    Twitter
-                                </span></label>
+                        <div class="flex-column info-detail-wrapper mt-16" id="twitter-wrapper">
+                            <label for="twitter" class="label">
+                                <i class="fa-brands fa-twitter icon-detail"></i>
+                                <span class="ml-4">Twitter</span>
+                            </label>
                             <input type="text" id="twitter" name="twitter" class="input input-detail"
                                 value="https://x.com/" placeholder="https://x.com/">
+                        </div>
+
+                        <div class="flex-column info-detail-wrapper mt-16" id="youtube-wrapper">
+                            <label for="youtube" class="label">
+                                <i class="fa-brands fa-youtube icon-detail"></i>
+                                <span class="ml-4">Youtube</span>
+                            </label>
+                            <input type="text" id="youtube" name="youtube" class="input input-detail"
+                                value="https://www.youtube.com/" placeholder="https://www.youtube.com/">
+                        </div>
+
+                        <div class="flex-column info-detail-wrapper mt-16" id="linkedin-wrapper">
+                            <label for="linkedin" class="label">
+                                <i class="fa-brands fa-linkedin icon-detail"></i>
+                                <span class="ml-4">Linkedin</span>
+                            </label>
+                            <input type="text" id="linkedin" name="linkedin" class="input input-detail"
+                                value="https://www.linkedin.com/" placeholder="https://www.linkedin.com/">
                         </div>
                     </div>
                 </form>
                 <!-- end form info -->
 
                 <div class="flex gap-10 list-social">
-                    <a href="#" class="flex-column icon-list-social active">
+                    <a href="#" class="flex-column icon-list-social active" id="facebook-link">
                         <i class="fa-brands fa-facebook-f"></i>
                         <span class="text-social">Facebook</span>
                     </a>
-                    <a href="#" class="flex-column icon-list-social active">
+                    <a href="#" class="flex-column icon-list-social active" id="instagram-link">
                         <i class="fa-brands fa-instagram"></i>
                         <span class="text-social">Instagram</span>
                     </a>
-                    <a href="#" class="flex-column icon-list-social active">
+                    <a href="#" class="flex-column icon-list-social active" id="twitter-link">
                         <i class="fa-brands fa-twitter"></i>
                         <span class="text-social">Twitter</span>
                     </a>
-                    <a href="#" class="flex-column icon-list-social">
+                    <a href="#" class="flex-column icon-list-social" id="youtube-link">
                         <i class="fa-brands fa-youtube"></i>
                         <span class="text-social">Youtube</span>
                     </a>
-                    <a href="#" class="flex-column icon-list-social">
+                    <a href="#" class="flex-column icon-list-social" id="linkedin-link">
                         <i class="fa-brands fa-linkedin"></i>
                         <span class="text-social">Linkedin</span>
                     </a>
@@ -151,7 +171,7 @@
 
             <div id="design" class="tab-content">
                 <!-- form info-->
-                <form action="" class="form">
+                <form id="form" class="form">
                     <div class="flex-column">
                         <p class="info-user mt-16">Thông tin cá nhân</p>
                         <label for="fname" class="label mt-16">Họ và tên</label>
@@ -198,27 +218,27 @@
                     <div class="line mt-16 mb-16"></div>
                     <div class="flex items-start gap-10">
                         <div>
-                            <p class="name-user">Dương Thanh Nghê 127</p>
-                            <span class="label inline-block mt-16">Manager</span>
+                            <p class="name-user" id="nameCard">Dương Thanh Nghê 127</p>
+                            <span class="label inline-block mt-16" id="titleCard">Manager</span>
                             <div class="flex items-center gap-10 mt-16">
                                 <span><i class="fa-solid fa-phone icon-card"></i></span>
                                 <div class="flex">
                                     <p class="title-contact">Điện thoại:</p>
-                                    <span class="info-contact">0365305920</span>
+                                    <span class="info-contact" id="phoneCard">0365305920</span>
                                 </div>
                             </div>
                             <div class="flex items-center gap-10 mt-8">
                                 <span><i class="fa-solid fa-envelope icon-card"></i></span>
                                 <div class="flex">
                                     <p class="title-contact">Email:</p>
-                                    <span class="info-contact">duongthanhnghe120796@gmail.com</span>
+                                    <span class="info-contact" id="emailCard2">duongthanhnghe120796@gmail.com</span>
                                 </div>
                             </div>
                             <div class="flex items-center gap-10 mt-8">
                                 <span><i class="fa-solid fa-location-dot icon-card"></i></span>
                                 <div class="flex">
                                     <p class="title-contact">Điạ chỉ:</p>
-                                    <span class="info-contact">Đà Năngx</span>
+                                    <span class="info-contact" id="addressCard">Đà Nẵng</span>
                                 </div>
                             </div>
                             <div class="flex items-center gap-10 mt-8">
@@ -234,16 +254,17 @@
                                 <img src="./assets/images/avatar-card.png" alt="avatar user" class="image-user">
                             </div>
                             <div class="flex gap-5">
-                                <a href="#" class="icon-social">
+                                <a href="#" class="icon-social" id="facebook-link-card">
                                     <i class="fa-brands fa-facebook-f"></i>
                                 </a>
-                                <a href="#" class="icon-social">
+                                <a href="#" class="icon-social" id="instagram-link-card">
                                     <i class="fa-brands fa-instagram"></i>
                                 </a>
-                                <a href="#" class="icon-social">
+                                <a href="#" class="icon-social" id="twitter-link-card">
                                     <i class="fa-brands fa-twitter"></i>
                                 </a>
                             </div>
+
                             <div class="line mt-16 mb-16"></div>
                         </div>
                     </div>
@@ -256,7 +277,6 @@
         </div>
     </main>
     <!-- end main -->
-
     <script src="./index.js"></script>
 </body>
 
